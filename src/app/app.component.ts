@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'BusyMachinesInterview';
-  selectedFunction = 0;
-  a = 0;
-  b = 0;
-  c = 0;
-  stringToReverse = '';
-  res = '';
+  private title = 'BusyMachinesInterview';
+  private selectedFunction;
+  private a = 0;
+  private b = 0;
+  private c = 0;
+  private stringToReverse = '';
+  private res = '';
 
   onSubmit() {
     switch (Number(this.selectedFunction)) {

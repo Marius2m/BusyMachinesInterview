@@ -13,18 +13,21 @@
     </select>
 
     <div *ngIf="selectedFunction == '0'">
-      <input type="text" class="form-control" [(ngModel)]="a" name="First num">
-      <input type="text" class="form-control" [(ngModel)]="b" name="Second num">
+      <input type="number" class="form-control" [(ngModel)]="a" name="First num" #sumNrA="ngModel">
+      <input type="number" class="form-control" [(ngModel)]="b" name="Second num">
+      <div class="error" [class.hide]="sumNrA.valid">
+        First number for sum is required!
+      </div>
     </div>
 
     <div *ngIf="selectedFunction == '1'">
-      <input type="text" class="form-control" [(ngModel)]="a" name="First num">
-      <input type="text" class="form-control" [(ngModel)]="b" name="Second num">
-      <input type="text" class="form-control" [(ngModel)]="c" name="Third num">
+      <input type="number" class="form-control" [(ngModel)]="a" name="First num">
+      <input type="number" class="form-control" [(ngModel)]="b" name="Second num">
+      <input type="number" class="form-control" [(ngModel)]="c" name="Third num">
     </div>
 
     <div *ngIf="selectedFunction == '2'">
-      <input type="text" class="form-control" [(ngModel)]="a" name="Prime number">
+      <input type="number" class="form-control" [(ngModel)]="a" name="Prime number">
     </div>
 
     <div *ngIf="selectedFunction == '3'">
